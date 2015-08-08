@@ -99,23 +99,6 @@ namespace ZaupClearInventoryLib
                 {
                     player.Player.Inventory.removeItem(2, 0);
                 }
-                player.Player.SteamChannel.send("tellClothing", ESteamCall.ALL, ESteamPacket.UPDATE_UDP_BUFFER, new object[]
-                {
-                    (byte)0,
-                    (byte)0,
-                    (byte)0,
-                    (byte)0,
-                    (byte)0,
-                    (byte)0,
-                    (byte)0,
-                    (byte)0,
-                    (byte)0,
-                    (byte)0,
-                    (byte)0,
-                    (byte)0,
-                    (byte)0,
-                    (byte)0
-                });
                 returnv = true;
             }
             catch (Exception e)

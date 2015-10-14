@@ -22,8 +22,6 @@ namespace ZaupClearInventoryLib
 
         protected override void Unload()
         {
-            ZaupClearInventoryLib.Instance = this;
-
             if (Configuration.Instance.DeleteInventoryOnDeath)
             {
                 Rocket.Unturned.Events.UnturnedPlayerEvents.OnPlayerDeath -= UnturnedPlayerEvents_OnPlayerDeath;

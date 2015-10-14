@@ -1,12 +1,7 @@
 ﻿using System;
-using System.Collections.Generic;
-
-using Rocket.API;
 using Rocket.Core.Logging;
 using Rocket.Core.Plugins;
-using Rocket.Unturned.Chat;
 using Rocket.Unturned.Player;
-using Rocket.Unturned.Plugins;
 using SDG.Unturned;
 
 namespace ZaupClearInventoryLib

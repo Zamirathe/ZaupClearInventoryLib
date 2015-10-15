@@ -1,23 +1,37 @@
 ﻿using System;
-using System.Collections.Generic;
-
-using Rocket.API;
 using Rocket.Core.Logging;
 using Rocket.Core.Plugins;
-using Rocket.Unturned.Chat;
 using Rocket.Unturned.Player;
-using Rocket.Unturned.Plugins;
 using SDG.Unturned;
 
 namespace ZaupClearInventoryLib
 {
-    public class ZaupClearInventoryLib : RocketPlugin
+    public class ZaupClearInventoryLib : RocketPlugin<ZaupClearInventoryLibConfiguration>
     {
         public static ZaupClearInventoryLib Instance;
 
         protected override void Load()
         {
             ZaupClearInventoryLib.Instance = this;
+
+            if (Configuration.Instance.DeleteInventoryOnDeath)
+            {
+                Rocket.Unturned.Events.UnturnedPlayerEvents.OnPlayerDeath += UnturnedPlayerEvents_OnPlayerDeath;
+            }
+        }
+
+        protected override void Unload()
+        {
+            if (Configuration.Instance.DeleteInventoryOnDeath)
+            {
+                Rocket.Unturned.Events.UnturnedPlayerEvents.OnPlayerDeath -= UnturnedPlayerEvents_OnPlayerDeath;
+            }
+        }
+
+        void UnturnedPlayerEvents_OnPlayerDeath(Rocket.Unturned.Player.UnturnedPlayer player, SDG.Unturned.EDeathCause cause, SDG.Unturned.ELimb limb, Steamworks.CSteamID murderer)
+        {
+            ZaupClearInventoryLib.Instance.ClearInv(player);
+            ZaupClearInventoryLib.Instance.ClearClothes(player);
         }
 
         public bool ClearInv(UnturnedPlayer player)

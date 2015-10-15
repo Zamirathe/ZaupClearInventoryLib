@@ -1,14 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-
+﻿using Rocket.API;
 using Rocket.Core;
-using Rocket.Core.Permissions;
-using Rocket.Unturned;
 using Rocket.Unturned.Chat;
-using Rocket.Unturned.Commands;
 using Rocket.Unturned.Player;
-using Rocket.API;
-using SDG.Unturned;
+using System.Collections.Generic;
 
 namespace ZaupClearInventoryLib
 {

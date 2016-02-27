@@ -78,37 +78,37 @@ namespace ZaupClearInventoryLib
             bool returnv = false;
             try
             {
-                player.Player.Clothing.askWearBackpack(0, 0, new byte[0]);
+                player.Player.Clothing.askWearBackpack(0, 0, new byte[0],true);
                 for (byte p2 = 0; p2 < player.Player.Inventory.getItemCount(2); p2++)
                 {
                     player.Player.Inventory.removeItem(2, 0);
                 }
-                player.Player.Clothing.askWearGlasses(0, 0, new byte[0]);
+                player.Player.Clothing.askWearGlasses(0, 0, new byte[0], true);
                 for (byte p2 = 0; p2 < player.Player.Inventory.getItemCount(2); p2++)
                 {
                     player.Player.Inventory.removeItem(2, 0);
                 }
-                player.Player.Clothing.askWearHat(0, 0, new byte[0]);
+                player.Player.Clothing.askWearHat(0, 0, new byte[0], true);
                 for (byte p2 = 0; p2 < player.Player.Inventory.getItemCount(2); p2++)
                 {
                     player.Player.Inventory.removeItem(2, 0);
                 }
-                player.Player.Clothing.askWearMask(0, 0, new byte[0]);
+                player.Player.Clothing.askWearMask(0, 0, new byte[0], true);
                 for (byte p2 = 0; p2 < player.Player.Inventory.getItemCount(2); p2++)
                 {
                     player.Player.Inventory.removeItem(2, 0);
                 }
-                player.Player.Clothing.askWearPants(0, 0, new byte[0]);
+                player.Player.Clothing.askWearPants(0, 0, new byte[0], true);
                 for (byte p2 = 0; p2 < player.Player.Inventory.getItemCount(2); p2++)
                 {
                     player.Player.Inventory.removeItem(2, 0);
                 }
-                player.Player.Clothing.askWearShirt(0, 0, new byte[0]);
+                player.Player.Clothing.askWearShirt(0, 0, new byte[0], true);
                 for (byte p2 = 0; p2 < player.Player.Inventory.getItemCount(2); p2++)
                 {
                     player.Player.Inventory.removeItem(2, 0);
                 }
-                player.Player.Clothing.askWearVest(0, 0, new byte[0]);
+                player.Player.Clothing.askWearVest(0, 0, new byte[0], true);
                 for (byte p2 = 0; p2 < player.Player.Inventory.getItemCount(2); p2++)
                 {
                     player.Player.Inventory.removeItem(2, 0);

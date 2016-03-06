@@ -3,18 +3,12 @@ using Rocket.Core;
 using Rocket.Unturned.Chat;
 using Rocket.Unturned.Player;
 using System.Collections.Generic;
+using System;
 
 namespace ZaupClearInventoryLib
 {
     public class CommandCi : IRocketCommand
     {
-        public bool AllowFromConsole
-        {
-            get
-            {
-                return false;
-            }
-        }
         public string Name
         {
             get
@@ -56,6 +50,14 @@ namespace ZaupClearInventoryLib
                     "ci.other",
                     "ci"
                 };
+            }
+        }
+
+        public AllowedCaller AllowedCaller
+        {
+            get
+            {
+                return AllowedCaller.Player;
             }
         }
 

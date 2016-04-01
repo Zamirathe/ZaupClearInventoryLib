@@ -40,7 +40,7 @@ namespace ZaupClearInventoryLib
             try
             {
                 player.Player.equipment.dequip();
-                for (byte p = 0; p < PlayerInventory.PAGES; p++)
+                for (byte p = 0; p < (PlayerInventory.PAGES -1); p++)
                 {
                     byte itemc = player.Player.inventory.getItemCount(p);
                     if (itemc > 0)
